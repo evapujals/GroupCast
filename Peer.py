@@ -27,6 +27,7 @@ class Peer(object):
         # Check if file is empty
         if os.stat(self.torrent_hash).st_size != 0:
             with open(self.torrent_hash) as file:
+                file.seek(0)
                 content = file.read()
             for num, val in enumerate(content):
                 self.data[num] = val
