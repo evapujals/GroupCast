@@ -24,17 +24,19 @@ class Peer(object):
 
     def set_seed(self):
         num = 0
-        # Check if file is empty
-        if os.stat(self.torrent_hash).st_size != 0:
-            with open(self.torrent_hash) as file:
-                file.seek(0)
-                content = file.read()
-            for num, val in enumerate(content):
-                self.data[num] = val
-            global total_length
-            total_length = len(self.data)
-        else:
-            print "EMPTY FILE"
+        try:
+            # Check if file is empty
+            if os.stat(self.torrent_hash).st_size != 0:
+                with open(self.torrent_hash) as file:
+                    content = file.read()
+                for num, val in enumerate(content):
+                    self.data[num] = val
+                global total_length
+                total_length = len(self.data)
+            else:
+                print "EMPTY FILE"
+        except OSError:
+            print "NO FILE"
 
     def set_impress(self, impress):
         self.impress = impress
