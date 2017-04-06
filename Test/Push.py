@@ -1,5 +1,5 @@
-from Peer import *
-from Tracker import *
+from Peer import Peer
+from Tracker import Tracker
 from Impress import *
 from pyactor.context import set_context, create_host, serve_forever
 

@@ -1,4 +1,4 @@
-from pyactor.context import interval, later
+from pyactor.context import interval
 from pyactor.exceptions import TimeoutError
 import random
 import os
