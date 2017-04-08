@@ -47,6 +47,7 @@ class Tracker(object):
     def get_peers(self, torrent_hash):
         try:
             # Check if we have peers or not
+            print len(self.torrents[torrent_hash])
             if len(self.torrents[torrent_hash]) > 0:
                 # Return 3 random peers of torrents[torrent_hash]
                 return random.sample(self.torrents[torrent_hash].keys(), min(3, len(self.torrents[torrent_hash])))

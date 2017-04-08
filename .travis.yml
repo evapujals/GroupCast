@@ -1,0 +1,8 @@
+language: python
+python:
+  - "2.7"
+install:
+  - pip install pyactor
+script:
+  - find *.py
+  - nosetests  --with-coverage --cover-package=GoTorrentGossip
