@@ -9,9 +9,9 @@
 **Tracker** is responsible of membership management functions.
 The classical functionality: join, leave and get_members.
 ###### Peer.py
-**Peer**
+**Peer**--
 Basic implementation to manage a member of a group.
-**LamportPeer**
+**LamportPeer**--
 Each message m is always timestamped with the current Lamport clock of its sender.
 ###### Sequencer.py
 **Sequencer** is used to implement total ordering.
