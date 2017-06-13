@@ -54,7 +54,7 @@ class Sequencer(object):
 
     def election(self, identity):
         if self.active:
-            self.sequencers[identity].receive("ok", self.dentity)
+            self.sequencers[identity].receive("ok", self.identity)
         else:
             self.impress.impress("No response from leader")
             raise TimeoutError()
