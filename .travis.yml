@@ -5,4 +5,4 @@ install:
   - pip install pyactor
 script:
   - find *.py
-  - nosetests  --with-coverage --cover-package=GoTorrentGossip
+  - nosetests  --with-coverage --cover-package=GroupCast

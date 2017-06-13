@@ -6,7 +6,7 @@
 ###### Task #2: Lamport clocks, total ordering, failure tolerance, leader election
 -------------------------------------
 ###### Group.py
-**Tracker** is responsible of membership management functions.
+**Group** is responsible of membership management functions.
 The classical functionality: join, leave and get_members.
 ###### Peer.py
 **Peer**<br />
